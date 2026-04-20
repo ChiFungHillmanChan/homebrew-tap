@@ -2,13 +2,12 @@ cask "scene" do
   version "0.4.0"
   sha256 "3a08d8510b5d27002177d3e36c6267475e7bae05c8ba3214cca45024b6f26657"
 
-  url "https://github.com/ChiFungHillmanChan/macbook-resizer/releases/download/v#{version}/Scene-#{version}.dmg",
-      verified: "github.com/ChiFungHillmanChan/macbook-resizer/"
+  url "https://github.com/ChiFungHillmanChan/macbook-resizer/releases/download/v#{version}/Scene-#{version}.dmg"
   name "Scene"
   desc "Menu bar workspaces and window layout manager"
   homepage "https://github.com/ChiFungHillmanChan/macbook-resizer"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :tahoe"
   depends_on arch: :arm64
 
   app "Scene.app"
@@ -23,9 +22,9 @@ cask "scene" do
 
   zap trash: [
     "~/Library/Application Support/Scene",
-    "~/Library/Preferences/com.hillman.SceneApp.plist",
     "~/Library/Caches/com.hillman.SceneApp",
     "~/Library/HTTPStorages/com.hillman.SceneApp",
+    "~/Library/Preferences/com.hillman.SceneApp.plist",
     "~/Library/Saved Application State/com.hillman.SceneApp.savedState",
   ]
 
