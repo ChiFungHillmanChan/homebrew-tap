@@ -1,6 +1,6 @@
 cask "scene" do
-  version "0.5.0"
-  sha256 "31af9a7b80bcda90f394da5110e2d4a9fec78f143f792c748f905edb15c562f9"
+  version "0.5.1"
+  sha256 "c78261091309a969d38c6f78038042fa356e283c61b807799cb582cde4135236"
 
   url "https://github.com/ChiFungHillmanChan/macbook-resizer/releases/download/v#{version}/Scene-#{version}.dmg"
   name "Scene"
