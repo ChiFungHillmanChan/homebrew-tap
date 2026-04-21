@@ -1,22 +1,16 @@
 cask "scene" do
-  version "0.4.3"
-  sha256 "633db7cf7e814e8069049db37e7ddcfb34ff1c5eb2435393d2a3777833aa1b0f"
+  version "0.5.0"
+  sha256 "31af9a7b80bcda90f394da5110e2d4a9fec78f143f792c748f905edb15c562f9"
 
   url "https://github.com/ChiFungHillmanChan/macbook-resizer/releases/download/v#{version}/Scene-#{version}.dmg"
   name "Scene"
   desc "Menu bar workspaces and window layout manager"
   homepage "https://github.com/ChiFungHillmanChan/macbook-resizer"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
 
   app "Scene.app"
-
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Scene.app"],
-                   sudo: false
-  end
 
   uninstall quit: "com.hillman.SceneApp"
 
@@ -29,13 +23,13 @@ cask "scene" do
   ]
 
   caveats <<~EOS
-    Scene is ad-hoc signed (no Apple Developer ID). The postflight step removes
-    the quarantine flag so the app opens without a Gatekeeper warning.
+    Scene is notarized by Apple — first launch opens without a Gatekeeper warning.
 
     On first launch, grant Accessibility access:
       System Settings -> Privacy & Security -> Accessibility -> enable "Scene"
 
-    If you rebuild and reinstall, you may need to re-grant Accessibility —
-    every ad-hoc build produces a new code hash, which macOS treats as a new app.
+    Upgrading from v0.4.3 or earlier? One-time re-authorization is required
+    because v0.5.0 switched from ad-hoc to Developer ID signing. Future
+    v0.5.x updates will preserve your grant automatically.
   EOS
 end
