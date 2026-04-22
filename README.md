@@ -32,8 +32,10 @@ brew untap chifunghillmanchan/tap    # optional
 
 ## Notes
 
-Casks in this tap are **ad-hoc signed**, not notarized by Apple. The `postflight`
-step in each cask removes the quarantine flag automatically, so you won't hit
-the Gatekeeper "cannot be verified" warning. You'll still need to grant any
-runtime permissions the app requests (Accessibility, Automation, etc.)
-the first time.
+Casks in this tap are **Developer ID signed and notarized by Apple** (since
+Scene v0.5.0), so the DMG installs without any Gatekeeper warning. You'll
+still need to grant any runtime permissions the app requests (Accessibility,
+Automation, etc.) the first time it launches.
+
+Scene v0.5.3+ ships as a **universal binary** (arm64 + x86_64), so the same
+cask installs natively on both Apple Silicon and Intel Macs.

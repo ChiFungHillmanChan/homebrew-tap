@@ -1,6 +1,6 @@
 cask "scene" do
-  version "0.5.2"
-  sha256 "92ccfc6f0836acbeb75308d4bd97c0a50415fa454419f98c1690053821568078"
+  version "0.5.3"
+  sha256 "7a5d54019179288bacbd950e629e9b676f92468e95d032ccf788b90ef18012b3"
 
   url "https://github.com/ChiFungHillmanChan/macbook-resizer/releases/download/v#{version}/Scene-#{version}.dmg"
   name "Scene"
@@ -8,7 +8,6 @@ cask "scene" do
   homepage "https://github.com/ChiFungHillmanChan/macbook-resizer"
 
   depends_on macos: ">= :sonoma"
-  depends_on arch: :arm64
 
   app "Scene.app"
 
