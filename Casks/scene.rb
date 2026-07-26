@@ -7,7 +7,7 @@ cask "scene" do
   desc "Menu bar workspaces and window layout manager"
   homepage "https://github.com/ChiFungHillmanChan/macbook-resizer"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Scene.app"
 
