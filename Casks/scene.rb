@@ -1,6 +1,6 @@
 cask "scene" do
-  version "0.5.6"
-  sha256 "fde02cce945656c37142060c384ff5806ef7139b1da0bfb705e3deeb338709c5"
+  version "0.7.4"
+  sha256 "1af1f340783480d59a5efdb22ab91df06cb6398147c647d683932c9c9d603df8"
 
   url "https://github.com/ChiFungHillmanChan/macbook-resizer/releases/download/v#{version}/Scene-#{version}.dmg"
   name "Scene"
@@ -28,7 +28,11 @@ cask "scene" do
       System Settings -> Privacy & Security -> Accessibility -> enable "Scene"
 
     Upgrading from v0.4.3 or earlier? One-time re-authorization is required
-    because v0.5.0 switched from ad-hoc to Developer ID signing. Future
-    v0.5.x updates will preserve your grant automatically.
+    because v0.5.0 switched from ad-hoc to Developer ID signing. Every
+    release since then preserves your grant automatically.
+
+    Multi-display users: v0.7.4 reserves the Dock's height on every display
+    so that re-applying a layout no longer shifts your windows when the Dock
+    moves between monitors. Turn on Dock auto-hide to reclaim that space.
   EOS
 end
