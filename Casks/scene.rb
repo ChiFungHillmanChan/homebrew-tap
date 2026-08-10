@@ -1,6 +1,6 @@
 cask "scene" do
-  version "0.7.4"
-  sha256 "1af1f340783480d59a5efdb22ab91df06cb6398147c647d683932c9c9d603df8"
+  version "0.7.5"
+  sha256 "27ecacc970f53a27c170071a6f0d704e48d06bceafa159b39299616f7a7edf69"
 
   url "https://github.com/ChiFungHillmanChan/macbook-resizer/releases/download/v#{version}/Scene-#{version}.dmg"
   name "Scene"
@@ -31,8 +31,9 @@ cask "scene" do
     because v0.5.0 switched from ad-hoc to Developer ID signing. Every
     release since then preserves your grant automatically.
 
-    Multi-display users: v0.7.4 reserves the Dock's height on every display
-    so that re-applying a layout no longer shifts your windows when the Dock
-    moves between monitors. Turn on Dock auto-hide to reclaim that space.
+    macOS 26 (Tahoe) users: v0.7.5 restores the Settings toolbar buttons
+    (new / duplicate / delete / restore defaults on Layouts and Workspaces),
+    which were missing in v0.7.2 through v0.7.4. macOS 14 and 15 were
+    unaffected.
   EOS
 end
