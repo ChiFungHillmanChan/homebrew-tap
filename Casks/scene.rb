@@ -1,11 +1,11 @@
 cask "scene" do
-  version "0.7.5"
-  sha256 "27ecacc970f53a27c170071a6f0d704e48d06bceafa159b39299616f7a7edf69"
+  version "0.7.6"
+  sha256 "e570369e7f0f6c00d93ba25aedb70fde9e4fb3000176e87be7db34d1a3a97c33"
 
-  url "https://github.com/ChiFungHillmanChan/macbook-resizer/releases/download/v#{version}/Scene-#{version}.dmg"
+  url "https://github.com/ChiFungHillmanChan/scene-macos/releases/download/v#{version}/Scene-#{version}.dmg"
   name "Scene"
   desc "Menu bar workspaces and window layout manager"
-  homepage "https://github.com/ChiFungHillmanChan/macbook-resizer"
+  homepage "https://github.com/ChiFungHillmanChan/scene-macos"
 
   depends_on macos: :sonoma
 
@@ -31,9 +31,9 @@ cask "scene" do
     because v0.5.0 switched from ad-hoc to Developer ID signing. Every
     release since then preserves your grant automatically.
 
-    macOS 26 (Tahoe) users: v0.7.5 restores the Settings toolbar buttons
-    (new / duplicate / delete / restore defaults on Layouts and Workspaces),
-    which were missing in v0.7.2 through v0.7.4. macOS 14 and 15 were
-    unaffected.
+    Downgrading below v0.7.6? Delete
+    ~/Library/Application Support/Scene/settings.json first — v0.7.6 upgrades
+    it to a schema older releases refuse to open, and they will not launch.
+    Scene reseeds it with defaults. Upgrades are unaffected.
   EOS
 end
