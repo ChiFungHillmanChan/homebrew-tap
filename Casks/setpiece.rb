@@ -1,6 +1,6 @@
 cask "setpiece" do
-  version "0.7.6"
-  sha256 "e570369e7f0f6c00d93ba25aedb70fde9e4fb3000176e87be7db34d1a3a97c33"
+  version "0.8.0"
+  sha256 "930e71e3fa51d486827f6b16b0dadbb2c2c56213190c459b183c123542ea2e43"
 
   # The asset and the bundle inside it are still named Scene: the app was
   # called Scene until v0.7.6, the bundle id never changed, and the updater
@@ -35,7 +35,7 @@ cask "setpiece" do
     because v0.5.0 switched from ad-hoc to Developer ID signing. Every
     release since then preserves your grant automatically.
 
-    Setpiece was called Scene until v0.7.6. Your existing install is
+    Setpiece was called Scene until v0.8.0. Your existing install is
     unaffected: same Accessibility grant, same layouts and workspaces, and
     scene:// URLs keep working alongside the new setpiece://.
 
