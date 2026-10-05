@@ -1,6 +1,6 @@
 cask "setpiece" do
-  version "0.8.0"
-  sha256 "930e71e3fa51d486827f6b16b0dadbb2c2c56213190c459b183c123542ea2e43"
+  version "0.8.1"
+  sha256 "c1103273029c8f61454829ddd5bc943d5d804005e7fa6ae9e582d54084d8d3f3"
 
   # The asset and the bundle inside it are still named Scene: the app was
   # called Scene until v0.7.6, the bundle id never changed, and the updater
